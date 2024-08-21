@@ -6,7 +6,7 @@ public class ThreadDemo{
 
         //----------------- what should we do to print this is in another thread------------
         //1.create a task
-        HelloPrinter task=new HelloPrinter();
+        HelloPrinter task=new HelloPrinter(1);
 
         //2.create a new thread
         //3.assign the task to the thread
