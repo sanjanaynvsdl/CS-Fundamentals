@@ -6,8 +6,6 @@ public class HelloPrinter implements Runnable {
     @Override
     public void run() {
         System.out.println(num +" "+"Printed by"+" "+ Thread.currentThread().getName());
-
-
     }
     
 }
