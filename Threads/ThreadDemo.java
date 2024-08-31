@@ -4,7 +4,7 @@ public class ThreadDemo{
         //As of now we did not create any thread, but java by default creates a thread called main thread
         System.out.println("hello "+Thread.currentThread().getName());
 
-        //----------------- what should we do to print this is in another thread------------
+        //----------------- what should we do to print this is in another thread ------------
         //1.create a task
         HelloPrinter task=new HelloPrinter(1);
 

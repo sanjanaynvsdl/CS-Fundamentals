@@ -1,4 +1,6 @@
 package Syncronization3;
+import java.util.*;
+import java.util.concurrent.locks.*;
 
 
 //In this scenario This is calles problem of sychronization
@@ -12,8 +14,10 @@ package Syncronization3;
 public class Main1 {
     public static void main(String[] args)  throws InterruptedException{
         count counter=new count();
-        Addition add=new Addition(counter);
-        Subtraction sub=new Subtraction(counter);
+        Lock lock=new ReentrantLock(); 
+
+        Addition add=new Addition(counter,lock);
+        Subtraction sub=new Subtraction(counter,lock);
 
         Thread adderThread=new Thread(add);
         Thread subtractorThread=new Thread(sub);
