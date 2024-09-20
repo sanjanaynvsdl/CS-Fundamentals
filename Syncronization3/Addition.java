@@ -10,9 +10,10 @@ public class Addition implements Runnable {
     }
     @Override
     public void run() {
-        for(int i=1;i<=10000;i++) {
+        for(int i=1;i<=50;i++) {
             lock.lock();
             counter.value+=i;
+            System.out.println("The value of the counter is: "+counter.value);
             lock.unlock();
         }
 
